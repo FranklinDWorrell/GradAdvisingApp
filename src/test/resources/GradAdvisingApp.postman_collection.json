@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "647b2463-21d2-494c-a91b-e7d3bc12138e",
+		"name": "GradAdvisingApp",
+		"description": "Used to test endpoints for the graduate advising application. ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Courses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/course",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"course"
+					]
+				},
+				"description": "Returns all the graduate courses in the catalog. "
+			},
+			"response": []
+		},
+		{
+			"name": "Get Course by Number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/course/6363",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"course",
+						"6363"
+					]
+				},
+				"description": "Returns a course by its number. "
+			},
+			"response": []
+		},
+		{
+			"name": "Create Course Listing",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"courseNumber\": \"6401\", \n\t\"courseTitle\": \"Concurrent Programming\", \n\t\"courseDescription\": \"A systematic study of concepts, theories, methods and algorithms that specifically address problems in distributed programming.  Topics include concurrency, interference, monitors and distributed programming issues, such as: synchronous and asynchronous message passing, remote procedure call, and rendezvous.\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/course",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"course"
+					]
+				},
+				"description": "Adds a course to the course catalog. "
+			},
+			"response": []
+		}
+	]
+}
